@@ -27,4 +27,14 @@ private MatrixService matrixService;
         assertNotNull(matrixService.fibonacci);
         assertEquals(matrixService.fibonacci.length,size+2);
     }
+
+    @Test
+    public void fib_series_non_square(){
+        int size = 15;
+        matrixService.fib(size);
+        for (int i = 0; i <= size; i++)
+            System.out.print(matrixService.fibonacci[i] + " ");
+        assertNotNull(matrixService.fibonacci);
+        assertEquals(matrixService.fibonacci.length,size+2);
+    }
 }

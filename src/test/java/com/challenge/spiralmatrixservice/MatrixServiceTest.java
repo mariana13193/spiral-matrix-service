@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -36,5 +38,12 @@ private MatrixService matrixService;
             System.out.print(matrixService.fibonacci[i] + " ");
         assertNotNull(matrixService.fibonacci);
         assertEquals(matrixService.fibonacci.length,size+2);
+    }
+
+    @Test
+    public void spiral_matrix(){
+        int[][] response = matrixService.getFibonacciSpiralMatrix(5,5);
+        for(int[] row: response)
+            System.out.print(Arrays.toString(row) + "\n");
     }
 }

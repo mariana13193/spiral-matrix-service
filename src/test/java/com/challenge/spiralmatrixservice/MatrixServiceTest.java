@@ -22,22 +22,22 @@ private MatrixService matrixService;
 
     @Test
     public void fib_series_square_is_ok(){
-        int size = 16;
+        int size = 9;
         matrixService.fib(size);
-        for (int i = 0; i <= size; i++)
+        for (int i = 0; i < size; i++)
             System.out.print(matrixService.fibonacci[i] + " ");
         assertNotNull(matrixService.fibonacci);
-        assertEquals(matrixService.fibonacci.length,size+2);
+        assertEquals(matrixService.fibonacci.length,size);
     }
 
     @Test
     public void fib_series_non_square(){
         int size = 15;
         matrixService.fib(size);
-        for (int i = 0; i <= size; i++)
+        for (int i = 0; i < size; i++)
             System.out.print(matrixService.fibonacci[i] + " ");
         assertNotNull(matrixService.fibonacci);
-        assertEquals(matrixService.fibonacci.length,size+2);
+        assertEquals(matrixService.fibonacci.length,size);
     }
 
     @Test
